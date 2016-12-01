@@ -8,7 +8,7 @@ class HabWpLogin
 	 * @param Boolean $return True for array and false for an object of stdClass
 	 * @return Array
 	 */
-	public static function doLogin($data, $url, $return = false)
+	public static function doLogin($data, $url, $return = true)
 	{
 		$options = array(
 			'http' => array(
