@@ -5,9 +5,10 @@ class HabWpLogin
 	 * Wrapper for HAB WP Login API
 	 * @param Array $data Username and PAssword for Wordpress site['user','pass']
 	 * @param String $url Url to the "hab-wp-login.php"
+	 * @param Boolean $return True for array and false for an object of stdClass
 	 * @return Array
 	 */
-	public static function doLogin($data, $url)
+	public static function doLogin($data, $url, $return = false)
 	{
 		$options = array(
 			'http' => array(
@@ -21,7 +22,7 @@ class HabWpLogin
 		if ($result === FALSE) {
 			die("AN ERROR OCCURED");
 		}
-		$json = json_decode($result, true);
+		$json = json_decode($result, $return);
 		return $json;
 	}
  
