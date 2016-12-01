@@ -15,7 +15,7 @@ How To Use
 
 Send POST params `user` and `pass` to *hab-wp-login.php*	located inside `wp-site`. And it will return user data like json_encoded: username, name, email, rank, capabilities etc.
 
-To use script inside `other-site`. Simple include the *HabWpLogin.php*, to your code and call the `HabWpLogin` class. here is an example:
+To use script inside `other-site`. Simply include the *HabWpLogin.php*, to your code and call the `HabWpLogin` class. here is an example:
 
     <?php
     
