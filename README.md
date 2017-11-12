@@ -22,8 +22,8 @@ To use script inside `other-site`. Simply include the *HabWpLogin.php*, to your 
     include "path/to/HabWpLogin.php";
     //Login Data username and password
     $data = [
-    		"user" => "user123";
-    		"pass" => "pass123";
+    		"user" => "user123",
+    		"pass" => "pass123",
     	];
     //Path to the hab-wp-login.php located on the server with wordpress installation.
     $pathWp = "path/to/hab-wp-login.php";
