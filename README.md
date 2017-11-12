@@ -30,3 +30,19 @@ To use script inside `other-site`. Simply include the *HabWpLogin.php*, to your 
     
     //Contains the array with user information
     $login = HabWpLogin::doLogin($data, $pathWp);
+    
+To use multiple authentications to keep the info about user updated, in the above mentioned test call you will get all kinds of data about user, one of those will be user_pass which will contain user's password's hash. You can authenticate using that with the following example, by simply adding another param hash:
+
+    include "path/to/HabWpLogin.php";
+    //Login Data username and password
+    $data = [
+            "user" => "user123",
+            "pass" => "$P$ABCDE123456789",
+            "hash" => 1,
+        ];
+    //Path to the hab-wp-login.php located on the server with wordpress installation.
+    $pathWp = "http://X/hab-wp-login.php";
+
+    //Contains the array with user information
+    $login = HabWpLogin::doLogin($data, $pathWp);
+    var_dump($login);
